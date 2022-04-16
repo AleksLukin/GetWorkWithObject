@@ -14,23 +14,23 @@ namespace GetWorkWithObject
     {
         static void Main(string[] args)
         {
-            MyClass myOne = new();
-            MyClass myTwo = new();
+            string str = "12";
+            int number = 123;
 
-            myOne.x = 1;
-            myTwo.x = 2;
+            DoWork(str);
+            DoAnotherWork(number);
 
-            Console.WriteLine(myOne.x);
-
-            myOne = myTwo;
-            myTwo.x = 12;
-
-            Console.WriteLine(myOne.x);
-            Console.WriteLine(myTwo.x);
+            Console.WriteLine(str);
+            Console.WriteLine(number);
         }
-    }
-    class MyClass
-    {
-        public int x;
+
+        static void DoWork(string referenceStr)
+        {
+            referenceStr = "12345";
+        }
+        static void DoAnotherWork(int valueInteger)
+        {
+            valueInteger = 1234;
+        }
     }
 }
