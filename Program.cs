@@ -12,11 +12,13 @@ namespace GetWorkWithObject
     {
         static void Main(string[] args)
         {
-            PaymentBanks paymentBanks = new();
+            //PaymentBanks paymentBanks = new();
             //paymentBanks.GetNumberAccount();
             //paymentBanks.GetBalanceAccount();
             //paymentBanks.GetTypeAccount();
-            paymentBanks.GetTransferMoney();
+            //paymentBanks.GetTransferMoney();
+            var work = new GetReverseWord();
+            work.WorkWord();
         }
     }        
     class PaymentBanks
@@ -70,6 +72,28 @@ namespace GetWorkWithObject
 
         }
     }
+    /// <summary>
+    /// класс работа со словом
+    /// </summary>
+    class GetReverseWord
+    {
+        public void WorkWord()
+        {
+            string word = "word";
+            char[] spellWord = new char[word.Length];
+
+            spellWord[0] = 'w';
+            spellWord[1] = 'o';
+            spellWord[2] = 'r';
+            spellWord[3] = 'd';
+
+            for (int i = 3; i >= 0; i--)
+            {
+                Console.Write(spellWord[i]);
+            }
+
+        }
+    }
 }
-/*1. В класс банковский счет, созданный в упражнениях, добавить метод, который переводит деньги с одного счета на другой. 
- * У метода два параметра: ссылка на объект класса банковский счет откуда снимаются деньги, второй параметр – сумма*/
+/*2. Реализовать метод, который в качестве входного параметра принимает строку string, 
+ * возвращает строку типа string, буквы в которой идут в обратном порядке. Протестировать метод.*/
